@@ -1,5 +1,5 @@
 {
-  "name": "taixiang-tk-toolkit",
+  "name": "tx-tk-toolkit",
   "version": "0.0.1",
   "description": "A foundation for scalable desktop apps",
   "keywords": [
@@ -148,19 +148,19 @@
     "publish": {
       "provider": "github",
       "owner": "liwangpu",
-      "repo": "taixiang-tk-toolkit",
+      "repo": "tx-tk-toolkit",
       "private": false,
       "channel": "latest",
       "releaseType": "release"
     }
   },
-  "homepage": "https://github.com/liwangpu/taixiang-tk-toolkit#readme",
+  "homepage": "https://github.com/liwangpu/tx-tk-toolkit#readme",
   "bugs": {
-    "url": "https://github.com/liwangpu/taixiang-tk-toolkit/issues"
+    "url": "https://github.com/liwangpu/tx-tk-toolkit/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/liwangpu/taixiang-tk-toolkit.git"
+    "url": "git+https://github.com/liwangpu/tx-tk-toolkit.git"
   },
   "license": "MIT",
   "author": {

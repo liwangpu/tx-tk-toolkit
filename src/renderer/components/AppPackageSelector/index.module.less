@@ -1,0 +1,116 @@
+.selector {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 300px;
+  height: 200px;
+  border-radius: 10px;
+  background-color: #001529;
+  overflow: hidden;
+  color: #FFF;
+  padding: 14px 14px 6px;
+
+  &__title {
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  &__button {
+    @s: 18px;
+    min-width: @s  !important;
+    min-height: @s  !important;
+    width: @s  !important;
+    height: @s  !important;
+    font-size: @s  !important;
+    padding: 0 !important;
+    line-height: 4px !important;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0 6px;
+  }
+
+  &__content {
+    flex: 1;
+    display: block;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    &>*{
+      margin-bottom: 4px;
+    }
+  }
+}
+
+.selector-button-icon {
+  font-size: 10px !important;
+  vertical-align: 0 !important;
+}
+
+.package {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 40px;
+  border-radius: 4px;
+  padding: 0 8px;
+  overflow: hidden;
+  color: #FFF;
+  cursor: pointer;
+  @activedBgl: #272D33;
+
+  &:hover {
+    background-color: @activedBgl;
+
+    .package__toolbar{
+      background-color: @activedBgl;
+    }
+
+    .package__button {
+      display: inline-block;
+    }
+  }
+
+  &--actived{
+    background-color: @activedBgl;
+  }
+
+  &__title {
+    height: 22px;
+    line-height: 22px;
+    padding: 0 20px 0 0;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    word-break: break-all;
+  }
+
+  &__icon {
+    color: #FFF !important;
+  }
+
+  &__toolbar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    padding: 0 4px 0 0;
+    height: 24px;
+  }
+
+  &__button {
+    color: #FFF !important;
+    display: none;
+
+    &:global(.ant-dropdown-open){
+      display: inline-block;
+    }
+  }
+}
+
+.app-package-edit-form {
+  width: 100%;
+}

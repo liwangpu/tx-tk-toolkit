@@ -82,7 +82,7 @@ const createWindow = async () => {
     width: 1400,
     height: 800,
     icon: getAssetPath('icon.png'),
-    title: `TK小工具  v${app.getVersion()}`,
+    title: `泰香TK小工具 v${app.getVersion()}`,
     webPreferences: {
       // session: currentSession,
       preload: app.isPackaged

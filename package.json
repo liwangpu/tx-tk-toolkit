@@ -1,6 +1,6 @@
 {
   "name": "tx-tk-toolkit",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "description": "A foundation for scalable desktop apps",
   "keywords": [
     "electron",
@@ -23,7 +23,7 @@
     "lint:fix": "cross-env NODE_ENV=development eslint . --ext .js,.jsx,.ts,.tsx --fix",
     "package": "ts-node ./.erb/scripts/clean.js dist && npm run build && electron-builder build --publish never && npm run build:dll",
     "upgradeVerion": "gulp updateAppVersion",
-    "pub": "electron-builder --win -p always",
+    "pub": "npm run upgradeVerion && electron-builder --win -p always",
     "rebuild": "electron-rebuild --parallel --types prod,dev,optional --module-dir release/app",
     "prestart": "cross-env NODE_ENV=development TS_NODE_TRANSPILE_ONLY=true webpack --config ./.erb/configs/webpack.config.main.dev.ts",
     "dev": "npm run start",
@@ -125,7 +125,7 @@
     "webpack-merge": "^5.9.0"
   },
   "build": {
-    "productName": "TK小工具",
+    "productName": "泰香TK小工具",
     "appId": "org.leon.tktoolkit",
     "asar": true,
     "asarUnpack": "**\\*.{node,dll}",

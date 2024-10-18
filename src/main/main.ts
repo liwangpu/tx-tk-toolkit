@@ -63,7 +63,7 @@ const createWindow = async () => {
     return path.join(RESOURCES_PATH, ...paths);
   };
 
-  const currentSession = session.fromPartition('leon-us-tk001@outlook.com');
+  // const currentSession = session.fromPartition('leon-us-tk001@outlook.com');
 
   // currentSession.setProxy({
   //   // proxyRules: `https://xiyuecc.shop/b20b73fd-0301-4509-cab1-b41fb140ce89`,
@@ -82,6 +82,7 @@ const createWindow = async () => {
     width: 1400,
     height: 800,
     icon: getAssetPath('icon.png'),
+    title: `TK小工具  v${app.getVersion()}`,
     webPreferences: {
       // session: currentSession,
       preload: app.isPackaged

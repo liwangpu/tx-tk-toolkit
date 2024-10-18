@@ -1,13 +1,11 @@
 import path from 'path';
-import { app, BrowserWindow, shell, ipcMain, MenuItemConstructorOptions, Menu, session } from 'electron';
+import { app, BrowserWindow, shell, ipcMain, session } from 'electron';
 import { autoUpdater } from 'electron-updater';
 import log from 'electron-log';
 import MenuBuilder from './menu';
-import { resolveHtmlPath } from './util';
-import { getNocoScript, getTiktokScript } from './externalScripts';
+import { getNocoScript } from './externalScripts';
 import { MessageTopic } from '../enums';
 import { handleMessage } from './messages';
-import { getExternalPreload } from './commons';
 
 class AppUpdater {
   constructor() {
@@ -63,7 +61,7 @@ const createWindow = async () => {
     return path.join(RESOURCES_PATH, ...paths);
   };
 
-  const currentSession = session.fromPartition('leon-us-tk001@outlook.com');
+  // const currentSession = session.fromPartition('leon-us-tk001@outlook.com');
 
   // currentSession.setProxy({
   //   // proxyRules: `https://xiyuecc.shop/b20b73fd-0301-4509-cab1-b41fb140ce89`,
@@ -82,6 +80,7 @@ const createWindow = async () => {
     width: 1400,
     height: 800,
     icon: getAssetPath('icon.png'),
+    title: `泰香TK小工具 v${app.getVersion()}`,
     webPreferences: {
       // session: currentSession,
       preload: app.isPackaged
